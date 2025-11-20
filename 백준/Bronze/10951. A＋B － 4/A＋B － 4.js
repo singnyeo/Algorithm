@@ -7,15 +7,12 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on("line", (line) => {
-  input.push(line.trim())
-  if(input == " ") {
-      rl.close();
-  }
+  input.push(line.trim());
 });
 
 rl.on("close", () => {
-    input.forEach(pair => {
-    const [a,b] = pair.split(" ").map(Number);
-    console.log(a+b)
-  })
+  input.forEach(pair => {
+    const [a, b] = pair.split(" ").map(Number);
+    console.log(a + b);
+  });
 });
